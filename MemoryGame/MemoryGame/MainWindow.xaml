@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MemoryGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Tic Tac Toe" Height="400" Width="400">
+
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="AntiqueWhite" />
+            <Setter Property="BorderThickness" Value="0.5" />
+            <Setter Property="FontSize" Value="70" />
+            <Setter Property="Foreground" Value="RosyBrown" />
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="Container">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="0" Grid.Row="0" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="1" Grid.Row="0" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="2" Grid.Row="0" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="3" Grid.Row="0" />
+
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="0" Grid.Row="1" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="1" Grid.Row="1" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="2" Grid.Row="1" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="3" Grid.Row="1" />
+
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="0" Grid.Row="2" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="1" Grid.Row="2" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="2" Grid.Row="2" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="3" Grid.Row="2" />
+
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="0" Grid.Row="3" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="1" Grid.Row="3" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="2" Grid.Row="3" />
+        <Image Stretch="Fill" Height="100" Width="100" Grid.Column="3" Grid.Row="3" />
+
+        <Label Grid.Column="0" Grid.Row="4" 
+               Name="lblTime" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" />
     </Grid>
 </Window>
