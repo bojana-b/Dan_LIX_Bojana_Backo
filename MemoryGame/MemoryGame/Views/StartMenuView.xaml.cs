@@ -14,17 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MemoryGame
+namespace MemoryGame.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StartMenuView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartMenuView : UserControl
     {
-        public MainWindow()
+        public StartMenuView()
         {
             InitializeComponent();
-            DataContext = new StartMenuViewModel(this);
+        }
+
+        private void Play_Clicked(object sender, RoutedEventArgs e)
+        {
+            var startMenu = DataContext as StartMenuViewModel;
+            startMenu.StartNewGame(categoryBox.SelectedIndex);
         }
     }
 }
